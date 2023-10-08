@@ -15,4 +15,8 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
+
+  // bringvege ({ @required bool bag, rupees=100}){ // 100 is a default value if no other value then 100 will be given
+  // curly braces mein by default hota hai
+  // }
 }
