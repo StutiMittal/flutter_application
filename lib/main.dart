@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/home", // sabse phele yehi khulega
+      initialRoute: "/login", // sabse phele yehi khulega
       routes: {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
