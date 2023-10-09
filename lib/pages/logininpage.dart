@@ -23,8 +23,14 @@ class LoginPage extends StatelessWidget {
             ),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "Enter your Username",
+                hintText: "Enter your username",
                 labelText: "Username",
+              ),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "Enter password",
+                labelText: "Password",
               ),
             ),
           ],
