@@ -21,6 +21,12 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "Enter your Username",
+                labelText: "Username",
+              ),
+            ),
           ],
         ));
   }
