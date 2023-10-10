@@ -5,7 +5,8 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         color: Colors.white,
-        child: Column(
+        child: SingleChildScrollView(
+            child: Column(
           children: [
             Image.asset("assets/images/login_img.png", fit: BoxFit.cover),
             SizedBox(
@@ -52,6 +53,6 @@ class LoginPage extends StatelessWidget {
                   ],
                 ))
           ],
-        ));
+        )));
   }
 }
