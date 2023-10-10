@@ -54,21 +54,26 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: 40.0,
                       ),
-                      Container(
-                        width: 150,
-                        height: 50,
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Login",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        },
+                        child: Container(
+                          width: 150,
+                          height: 50,
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                           ),
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurple,
-                          borderRadius: BorderRadius.circular(30),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
                         ),
                       )
 
@@ -86,3 +91,4 @@ class _LoginPageState extends State<LoginPage> {
         ));
   }
 }
+//inkwell widget mein effect deta hai when we click on it whereas just mein koi farak nhi padhta
