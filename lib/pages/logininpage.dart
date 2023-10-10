@@ -57,7 +57,6 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         width: 150,
                         height: 50,
-                        color: Colors.deepPurple,
                         alignment: Alignment.center,
                         child: Text(
                           "Login",
@@ -66,6 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       )
 
