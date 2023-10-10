@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/login", // sabse phele yehi khulega
+      initialRoute: "/", // sabse phele yehi khulega
       routes: {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
