@@ -10,6 +10,17 @@ class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool chngbutton = false;
   final _formkey = GlobalKey<FormState>();
+  moveToHome(BuildContext context) async {
+    setState(() {
+      chngbutton = true;
+    });
+    await Future.delayed(Duration(seconds: 1));
+    await Navigator.pushNamed(context, MyRoutes.homeRoute);
+    setState(() {
+      chngbutton = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -63,17 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius:
                               BorderRadius.circular(chngbutton ? 50 : 8),
                           child: InkWell(
-                            onTap: () async {
-                              setState(() {
-                                chngbutton = true;
-                              });
-                              await Future.delayed(Duration(seconds: 1));
-                              await Navigator.pushNamed(
-                                  context, MyRoutes.homeRoute);
-                              setState(() {
-                                chngbutton = false;
-                              });
-                            },
+                            onTap: () => moveToHome(context),
                             child: AnimatedContainer(
                               duration: Duration(seconds: 1),
                               width: chngbutton ? 50 : 150,
