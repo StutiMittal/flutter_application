@@ -55,36 +55,44 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: 40.0,
                       ),
-                      InkWell(
-                        onTap: () async {
-                          setState(() {
-                            chngbutton = true;
-                          });
-                          await Future.delayed(Duration(seconds: 1));
-                          Navigator.pushNamed(context, MyRoutes.homeRoute);
-                        },
-                        child: AnimatedContainer(
-                          duration: Duration(seconds: 1),
-                          width: chngbutton ? 50 : 150,
-                          height: 50,
-                          alignment: Alignment.center,
-                          child: chngbutton
-                              ? Icon(
-                                  Icons.done,
-                                  color: Colors.amber,
-                                )
-                              : Text(
-                                  "Login",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
+                      Material(
+                        color: Colors.deepPurple,
+                        borderRadius:
+                            BorderRadius.circular(chngbutton ? 50 : 8),
+                        child: InkWell(
+                          onTap: () async {
+                            setState(() {
+                              chngbutton = true;
+                            });
+                            await Future.delayed(Duration(seconds: 1));
+                            await Navigator.pushNamed(
+                                context, MyRoutes.homeRoute);
+                            setState(() {
+                              chngbutton = false;
+                            });
+                          },
+                          child: AnimatedContainer(
+                            duration: Duration(seconds: 1),
+                            width: chngbutton ? 50 : 150,
+                            height: 50,
+                            alignment: Alignment.center,
+                            child: chngbutton
+                                ? Icon(
+                                    Icons.done,
+                                    color: Colors.amber,
+                                  )
+                                : Text(
+                                    "Login",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
                                   ),
-                                ),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple,
-                            borderRadius:
-                                BorderRadius.circular(chngbutton ? 50 : 8),
+                            // decoration: BoxDecoration(
+                            //   color: Colors.deepPurple,
+
+                            // ),
                           ),
                         ),
                       )
@@ -104,3 +112,4 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 //inkwell widget mein effect deta hai when we click on it whereas just mein koi farak nhi padhta
+//ripple effect comes when we use child:ink under inkwell iss se ripple effect aata hai
