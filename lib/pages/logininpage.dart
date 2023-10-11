@@ -67,17 +67,23 @@ class _LoginPageState extends State<LoginPage> {
                           width: chngbutton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
+                          child: chngbutton
+                              ? Icon(
+                                  Icons.done,
+                                  color: Colors.amber,
+                                )
+                              : Text(
+                                  "Login",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
                           decoration: BoxDecoration(
                             color: Colors.deepPurple,
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius:
+                                BorderRadius.circular(chngbutton ? 50 : 8),
                           ),
                         ),
                       )
