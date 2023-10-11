@@ -8,6 +8,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+  bool chngbutton = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -56,10 +57,14 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, MyRoutes.homeRoute);
+                          setState(() {
+                            chngbutton = true;
+                          });
+                          //Navigator.pushNamed(context, MyRoutes.homeRoute);
                         },
-                        child: Container(
-                          width: 150,
+                        child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          width: chngbutton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
                           child: Text(
