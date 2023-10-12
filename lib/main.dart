@@ -3,6 +3,7 @@ import 'package:flutter_application_1/pages/homepage.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_1/pages/logininpage.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,19 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily,
-          appBarTheme: AppBarTheme(
-            color: Colors.white,
-            elevation: 0.0,
-            iconTheme: IconThemeData(color: Colors.black),
-            //textTheme: Theme.of(context).textTheme,
-            //     titleTextStyle: Theme.of(context).textTheme.headline6, // Use titleTextStyle
-            //  toolbarTextStyle: Theme.of(context).textTheme.,
-            titleTextStyle: TextStyle(color: Colors.black),
-          )),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
+
       debugShowCheckedModeBanner: false,
 
       initialRoute: MyRoutes.homeRoute, // sabse phele yehi khulega
