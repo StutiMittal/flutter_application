@@ -20,3 +20,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+// Widget tree is immutable 
+//elemet tree is mutable 
+//render tree is used to draw 
