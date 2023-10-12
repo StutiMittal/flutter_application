@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -12,17 +13,24 @@ class Mydrawer extends StatelessWidget {
           //padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-                padding: EdgeInsets.zero,
-                child: UserAccountsDrawerHeader(
-                  margin: EdgeInsets.zero,
-                  // decoration:
-                  //     BoxDecoration(color: Color.fromARGB(255, 223, 82, 21)),
-                  accountName: Text("Stuti"),
-                  accountEmail: Text("stuti111@gmail.com"),
-                  currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(imageUrl),
-                  ),
-                ))
+              padding: EdgeInsets.zero,
+              child: UserAccountsDrawerHeader(
+                margin: EdgeInsets.zero,
+                // decoration:
+                //     BoxDecoration(color: Color.fromARGB(255, 223, 82, 21)),
+                accountName: Text("Stuti"),
+                accountEmail: Text("stuti111@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(imageUrl),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                CupertinoIcons.home,
+                color: Colors.white,
+              ),
+            )
           ],
         ),
       ),
