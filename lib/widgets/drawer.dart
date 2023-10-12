@@ -30,6 +30,10 @@ class Mydrawer extends StatelessWidget {
                 CupertinoIcons.home,
                 color: Colors.white,
               ),
+              title: Text(
+                "Home",
+                style: TextStyle(color: Colors.white),
+              ),
             )
           ],
         ),
