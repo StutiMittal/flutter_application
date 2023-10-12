@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             elevation: 0.0,
             iconTheme: IconThemeData(color: Colors.black),
-            textTheme: Theme.of(context).textTheme,
+            //textTheme: Theme.of(context).textTheme,
+            //     titleTextStyle: Theme.of(context).textTheme.headline6, // Use titleTextStyle
+            //  toolbarTextStyle: Theme.of(context).textTheme.,
+            titleTextStyle: TextStyle(color: Colors.black),
           )),
       darkTheme: ThemeData(brightness: Brightness.dark),
       debugShowCheckedModeBanner: false,
